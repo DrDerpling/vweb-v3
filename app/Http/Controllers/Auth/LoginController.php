@@ -36,4 +36,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * Username that needs to be used
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'username';
+    }
 }
