@@ -16,6 +16,7 @@ class CreateVbItemStatusesTable extends Migration
         Schema::create('vb_item_statuses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

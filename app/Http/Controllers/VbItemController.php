@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\vbItem;
 use Illuminate\Http\Request;
+use App\Models\VbItemStatus;
+use App\Models\SubType;
 
 class VbItemController extends Controller
 {
@@ -24,7 +26,8 @@ class VbItemController extends Controller
      */
     public function create()
     {
-        //
+        $subtypes = SubType::all();
+
     }
 
     /**

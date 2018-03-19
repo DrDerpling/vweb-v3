@@ -18,6 +18,7 @@ class CreateSubTypesTable extends Migration
             $table->string('name');
             $table->integer('main_type_id');
             $table->integer('brand_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class CreateVbItemsTable extends Migration
         Schema::create('vb_items', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('type_id');
+            $table->integer('subtype_id');
             $table->integer('status_id');
             $table->integer('user_id');
 
@@ -35,6 +35,8 @@ class CreateVbItemsTable extends Migration
 
             $table->timestamp('warranty_start')->nullable();
             $table->timestamp('warranty_end')->nullable();
+
+            $table->softDeletes();
             $table->timestamps();
         });
 
